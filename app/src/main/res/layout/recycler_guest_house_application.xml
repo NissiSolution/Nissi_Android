@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:background="@drawable/background_leave_request"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/position"
+        android:text="001."
+        android:textColor="@color/nissi_blue"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/employee_name"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/colan"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/employee_name"
+                android:textColor="@color/nissi_blue"
+                android:id="@+id/employee_name"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/employee_id"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/colan"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/employee_id"
+                android:textColor="@color/nissi_blue"
+                android:id="@+id/employee_id"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/requested_on"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/colan"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/requested_on"
+                android:textColor="@color/nissi_blue"
+                android:id="@+id/requested_on"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/period"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/colan"
+                android:textColor="@color/nissi_blue"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/period"
+                android:id="@+id/period"
+                android:textColor="@color/nissi_blue"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

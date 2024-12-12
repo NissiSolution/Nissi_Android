@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nissi_blue">
+
+    <LinearLayout
+        android:background="@drawable/background_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:padding="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rejection_reason"
+            android:textColor="@color/nissi_blue"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:textColorHint="@color/nissi_blue"
+            android:textColor="@color/signature_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:maxLines="5"
+                android:background="@drawable/background_box"
+                android:id="@+id/reason"
+                android:hint="@string/reason"
+                android:textColorHint="@color/nissi_blue"
+                android:textColor="@color/signature_blue"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:id="@+id/cancel"
+                android:layout_toStartOf="@id/spacer1"/>
+
+            <Space
+                android:layout_centerInParent="true"
+                android:id="@+id/spacer1"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_toEndOf="@id/spacer1"
+                android:id="@+id/reject"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/reject"
+                android:backgroundTint="@color/red"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

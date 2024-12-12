@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="Widget.Theme.NISSI.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.NISSI.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="round_frame">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="semi_round_frame">
+        <item name="cornerSize">10%</item>
+    </style>
+
+</resources>

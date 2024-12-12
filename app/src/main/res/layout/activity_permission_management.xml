@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Admin.PermissionManagementActivity"
+    android:background="@color/nissi_blue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Nissi.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/nissi_blue"
+            app:popupTheme="@style/Theme.Nissi.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/background_content" />
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_above="@+id/update">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/staff_name"
+                    android:textColor="@color/nissi_blue"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colan"
+                    android:textColor="@color/nissi_blue"
+                    android:layout_marginEnd="@dimen/_5sdp"/>
+
+                <Spinner
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/staff_spinner"
+                    android:background="@drawable/background_spinner"
+                    android:layout_marginEnd="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/department"
+                    android:textColor="@color/nissi_blue"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colan"
+                    android:textColor="@color/nissi_blue"
+                    android:layout_marginEnd="@dimen/_5sdp"/>
+
+                <Spinner
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/department_spinner"
+                    android:background="@drawable/background_spinner"
+                    android:layout_marginEnd="@dimen/_5sdp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:id="@+id/update"
+        android:layout_above="@+id/licence"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_20sdp"/>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/licence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/nissi"
+        android:textColor="@color/nissi_blue"
+        android:textStyle="italic"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/nissi_blue"
+        android:visibility="visible"/>
+
+</RelativeLayout>

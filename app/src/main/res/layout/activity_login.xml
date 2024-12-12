@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RandL.LoginActivity"
+    android:background="@color/nissi_blue">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content"
+        android:layout_margin="@dimen/_10sdp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/licence"
+        android:layout_marginTop="@dimen/_20sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@mipmap/logo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtinputpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtinputemail"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:hint="@string/password"
+                android:textColorHint="@color/nissi_blue"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/nissi_blue"
+                app:startIconDrawable="@drawable/vector_lock"
+                app:startIconTint="@color/nissi_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_text"
+                    android:inputType="textPassword"
+                    android:textColor="@color/nissi_blue" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtinputemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:hint="@string/email"
+                android:textColorHint="@color/nissi_blue"
+                app:endIconMode="clear_text"
+                app:endIconTint="#F44336"
+                app:startIconDrawable="@drawable/vector_email"
+                app:startIconTint="@color/nissi_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_text"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/nissi_blue" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtinputpassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:backgroundTint="@color/nissi_blue"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:progressTint="@color/nissi_blue"
+        android:indeterminateTint="@color/nissi_blue"/>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/licence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/nissi"
+        android:textColor="@color/nissi_blue"
+        android:textStyle="italic"
+        />
+
+</RelativeLayout>

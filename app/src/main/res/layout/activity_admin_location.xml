@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Locations.AdminLocationActivity"
+    android:background="@color/nissi_blue"
+    android:id="@+id/postsFrameLayout">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Nissi.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/nissi_blue"
+            app:popupTheme="@style/Theme.Nissi.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/licence"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/staff_name"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/background_spinner_2"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_10sdp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radio">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all"
+                    android:id="@+id/radio_all"
+                    android:textColor="@color/nissi_blue"
+                    android:textStyle="bold"
+                    android:buttonTint="@color/nissi_blue"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/punched_in"
+                    android:id="@+id/punched_in"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/nissi_blue"
+                    android:textStyle="bold"
+                    android:buttonTint="@color/nissi_blue"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/punched_out"
+                    android:id="@+id/punched_out"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/nissi_blue"
+                    android:textStyle="bold"
+                    android:buttonTint="@color/nissi_blue"/>
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_10sdp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date"
+                    android:textColor="@color/nissi_blue"
+                    android:textStyle="bold"
+                    android:text="@string/date_0"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pick_date"
+                    android:id="@+id/pick_date"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:backgroundTint="@color/signature_blue"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:backgroundTint="@color/green"
+                    android:id="@+id/filter"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerView"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:progressTint="@color/nissi_blue"
+        android:indeterminateTint="@color/nissi_blue"/>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/licence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/nissi"
+        android:textColor="@color/nissi_blue"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>

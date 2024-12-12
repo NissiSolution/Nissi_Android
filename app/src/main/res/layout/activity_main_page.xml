@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Others.MainPageActivity"
+    android:background="@color/nissi_blue"
+    android:id="@+id/postsFrameLayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Nissi.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/nissi_blue"
+            app:popupTheme="@style/Theme.Nissi.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content"
+        android:layout_margin="@dimen/_10sdp"
+        />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/nissi_blue"
+        android:id="@+id/version"/>
+
+    <ScrollView
+        android:layout_below="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_above="@+id/licence">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dummy"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/background_box"
+                android:padding="2dp">
+
+                <com.nissisolution.nissibeta.CustomView.CustomCalendar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/custom_calender"
+                    android:padding="@dimen/_5sdp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/dummy"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        app:shapeAppearance="@style/semi_round_frame"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@mipmap/checked"
+                        android:id="@+id/check_in_image"
+                        android:scaleType="fitXY"/>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        app:shapeAppearance="@style/semi_round_frame"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@mipmap/guest_house"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:id="@+id/guest_house_image"
+                        android:scaleType="fitXY"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/check_in_out"
+                        android:textAlignment="center"
+                        android:id="@+id/check_in_text"
+                        android:textColor="@color/nissi_blue"
+                        />
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guest_house"
+                        android:textAlignment="center"
+                        android:id="@+id/guest_house_text"
+                        android:textColor="@color/nissi_blue"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            app:shapeAppearance="@style/semi_round_frame"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:src="@mipmap/hr"
+                            android:id="@+id/hr_image"
+                            android:scaleType="fitXY"/>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/background_balance_notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hr_count_layout">
+
+                            <TextView
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textColor="@color/white"
+                                android:textAllCaps="true"
+                                android:id="@+id/hr_count"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/human_resources"
+                        android:textAlignment="center"
+                        android:id="@+id/hr_text"
+                        android:textColor="@color/nissi_blue"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        app:shapeAppearance="@style/semi_round_frame"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@mipmap/dim_support"
+                        android:id="@+id/support_image"
+                        android:scaleType="fitXY"/>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        app:shapeAppearance="@style/semi_round_frame"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@mipmap/dim_sos"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:id="@+id/sos_image"
+                        android:scaleType="fitXY"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/support"
+                        android:textAlignment="center"
+                        android:id="@+id/support_text"
+                        android:textColor="@color/nissi_blue"
+                        />
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sos"
+                        android:textAlignment="center"
+                        android:id="@+id/sos_text"
+                        android:textColor="@color/nissi_blue"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/licence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/nissi"
+        android:textColor="@color/nissi_blue"
+        android:textStyle="italic"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/nissi_blue"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Punching.CheckInOutActivity"
+    android:background="@color/nissi_blue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Nissi.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/nissi_blue"
+            app:popupTheme="@style/Theme.Nissi.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/employee_name"
+        android:textColor="@color/nissi_blue"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:paddingEnd="10dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"/>
+
+    <TextView
+        android:id="@+id/employee_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="@string/employee_id"
+        android:textColor="@color/nissi_blue"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:paddingEnd="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/employee_id"
+        android:layout_above="@+id/licence"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp">
+
+            <RelativeLayout
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_box"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:id="@+id/layout_2"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_3">
+
+                    <RadioGroup
+                        android:id="@+id/leave_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:buttonTint="@color/nissi_blue"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/punch_in_out"
+                            android:text="@string/punch_in_out"
+                            android:textColor="@color/nissi_blue"
+                            android:textStyle="bold"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:buttonTint="@color/nissi_blue"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/night_shift"
+                            android:text="@string/night_shift"
+                            android:textColor="@color/nissi_blue"
+                            android:textStyle="bold"/>
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/leave_type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                        android:buttonTint="@color/nissi_blue"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/comp_off"
+                        android:text="@string/comp_off"
+                        android:textColor="@color/nissi_blue"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:buttonTint="@color/nissi_blue"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/local_holiday"
+                        android:text="@string/local_holiday"
+                        android:textColor="@color/nissi_blue"
+                        android:textStyle="bold"/>
+
+
+
+            </RadioGroup>
+
+                    <Spinner
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type_of"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/background_spinner"
+                        />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_below="@+id/layout_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/map_layout">
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_1"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <androidx.fragment.app.FragmentContainerView xmlns:map="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="@dimen/_200sdp"
+                            tools:context=".Activity.Punching.MapsActivity"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/_10sdp"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="@dimen/_200sdp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_transparent_box"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="@dimen/_200sdp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_transparent_box_2">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/baseline_remove_red_eye_24"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="@dimen/_20sdp"
+                                android:id="@+id/eye"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/calender_layout"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <CalendarView
+                            android:id="@+id/calender_view"
+                            android:layout_width="@dimen/_220sdp"
+                            android:layout_height="@dimen/_240sdp"
+                            android:background="@drawable/background_box"/>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/night_shift_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginTop="@dimen/_10sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/start_time"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/nissi_blue"
+                                                android:textSize="15sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/startDate"
+                                                android:textColor="@color/signature_blue"/>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/start_time_layout"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/background_box"
+                                            android:paddingStart="@dimen/_5sdp"
+                                            android:paddingEnd="@dimen/_5sdp">
+
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:layout_width="@dimen/_73sdp"
+                                                android:layout_height="wrap_content"
+                                                android:textAlignment="center"
+                                                android:inputType="time|text"
+                                                android:textColor="@color/signature_blue"
+                                                android:id="@+id/start_time" />
+
+                                            <ImageView
+                                                android:layout_gravity="center"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/vector_time"
+                                                app:tint="@color/nissi_blue"
+                                                android:id="@+id/start_time_image" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginTop="@dimen/_10sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/end_time"
+                                                android:textStyle="bold"
+                                                android:textColor="@color/nissi_blue"
+                                                android:textSize="15sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/endDate"
+                                                android:textColor="@color/signature_blue"/>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/end_time_layout"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/background_box"
+                                            android:paddingStart="@dimen/_5sdp"
+                                            android:paddingEnd="@dimen/_5sdp">
+
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:layout_width="@dimen/_73sdp"
+                                                android:layout_height="wrap_content"
+                                                android:textAlignment="center"
+                                                android:inputType="time|text"
+                                                android:textColor="@color/signature_blue"
+                                                android:id="@+id/end_time"/>
+
+                                            <ImageView
+                                                android:layout_gravity="center"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/vector_time"
+                                                app:tint="@color/nissi_blue"
+                                                android:id="@+id/end_time_image"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/nissi_blue"
+                            android:textColor="@color/signature_blue">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="@dimen/_220sdp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/reason"
+                                android:background="@drawable/background_box"
+                                android:hint="@string/reason"
+                                android:textColorHint="@color/nissi_blue"
+                                android:textColor="@color/signature_blue"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/map_layout"
+                    android:id="@+id/layout_4"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_0"
+                        android:textColor="@color/nissi_blue"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <DigitalClock
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/time_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_4"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/time_0"
+                    android:textColor="@color/nissi_blue"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/check_in_out_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/time_now"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <Button
+                        android:id="@+id/check_in"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/green"
+                        android:text="@string/check_in"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:minHeight="60dp"/>
+
+                    <Button
+                        android:layout_toEndOf="@+id/check_in"
+                        android:id="@+id/check_out"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:minHeight="60dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/red"
+                        android:text="@string/check_out"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/request_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/time_now"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <Button
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/send_request"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="60dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/nissi_blue"
+                        android:text="@string/send_request"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_2"
+                android:padding="@dimen/_5sdp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:progressTint="@color/nissi_blue"
+        android:indeterminateTint="@color/nissi_blue"/>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/licence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/nissi"
+        android:textColor="@color/nissi_blue"
+        android:textStyle="italic" />
+
+</RelativeLayout>

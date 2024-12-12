@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout_1">
+
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/period"
+            android:textColor="@color/nissi_blue"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colan"
+            android:textColor="@color/nissi_blue"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <Spinner
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month"
+            android:background="@drawable/background_spinner"/>
+
+        <Spinner
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/background_spinner"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textColor="@color/nissi_blue"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colan"
+            android:textColor="@color/nissi_blue"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <Spinner
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type"
+            android:background="@drawable/background_spinner"/>
+
+    </LinearLayout>
+
+</LinearLayout>

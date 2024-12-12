@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuicon"
+        android:title=""
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/vector_menu"
+        android:iconTint="?attr/colorOnSecondary"
+        >
+
+        <menu>
+
+            <item
+                android:id="@+id/item_leave"
+                android:icon="@drawable/vector_list"
+                android:orderInCategory="100"
+                android:title="@string/leave"
+                app:showAsAction="never"
+                android:iconTint="?attr/colorOnSecondary" />
+
+            <item
+                android:id="@+id/item_settings"
+                android:title="@string/missed_punch"
+                app:showAsAction="never"
+                android:orderInCategory="1"
+                android:icon="@drawable/vector_request"
+                android:iconTint="?attr/colorOnSecondary" />
+
+        </menu>
+
+    </item>
+
+</menu>

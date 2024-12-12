@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_box">
+
+    <RelativeLayout
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:textColor="@color/text_black"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="2"
+            android:text="@string/dummy_message"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/content"
+            android:text="@string/author"
+            android:textColor="@color/text_black"
+            android:textStyle="italic"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:id="@+id/author"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

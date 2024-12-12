@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Activity.Locations.AdminMapsActivity"
+android:background="@color/nissi_blue"
+android:id="@+id/postsFrameLayout">
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/layout_1">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/staff_name"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:background="@drawable/background_spinner_2"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_10sdp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radio">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:id="@+id/radio_all"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:buttonTint="@color/white"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/punched_in"
+                android:id="@+id/punched_in"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:buttonTint="@color/white"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/punched_out"
+                android:id="@+id/punched_out"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:buttonTint="@color/white"/>
+
+        </RadioGroup>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_10sdp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/date_0"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_date"
+                android:id="@+id/pick_date"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:backgroundTint="@color/signature_blue"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:backgroundTint="@color/green"
+                android:id="@+id/filter"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <fragment
+        android:layout_below="@+id/layout_1"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.Locations.AdminMapsActivity" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/nissi_blue"
+        android:visibility="gone"/>
+
+</RelativeLayout>

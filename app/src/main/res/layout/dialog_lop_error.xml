@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nissi_blue">
+
+    <LinearLayout
+        android:background="@drawable/background_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:padding="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_conf"
+            android:textColor="@color/nissi_blue"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/approval_error"
+            android:textColor="@color/nissi_blue"/>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:id="@+id/cancel"
+                android:layout_toStartOf="@id/spacer1"
+                android:backgroundTint="@color/red"/>
+
+            <Space
+                android:layout_centerInParent="true"
+                android:id="@+id/spacer1"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_toEndOf="@id/spacer1"
+                android:id="@+id/send_request"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                android:backgroundTint="@color/nissi_blue"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
